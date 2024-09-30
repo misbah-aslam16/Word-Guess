@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Word Guessing Game</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-   
     <div class="card" style="width: 18rem;">
-        <div class="card-body">
+        <div class="card-body" style="height: 20vh;">
           <h5 class="card-title">WORD GUESSING GAME</h5>
           <h6 class="card-subtitle text-body-secondary">Guess the word</h6>
           <p class="card-text">Hint: The act of finding something.</p>
-          <button class="btn2">r</button> <button class="btn2">h</button><button class="btn2">e</button> <button class="btn2">a</button>
-          <button class="btn2">s</button><button class="btn2">c</button> <br>
-          <input type="text" class="input" height="">
-          <br>
-          <button class="btn1"><a href="#" class="card-link">DONE</a></button><br>
-        
+          <button class="btn2">r</button> <button class="btn2">h</button>
+          <button class="btn2">e</button> <button class="btn2">a</button>
+          <button class="btn2">s</button> <button class="btn2">c</button><br>
+          <input type="text" class="input"><br>
+          <button class="btn1" onclick="check()">DONE</button><br>
+          <button class="btn1" onclick="goBack()">Back</button>
         </div>
-      </div>
+    </div>
 
+    <script>
+        function check() {
+            const guess = document.querySelector('.input').value.toLowerCase();
+            
+            
+            if (guess === "search") {
+              alert("Congratulations! You guessed the correct word.");
+            } else {
+              alert("Try again.");
+            }
+        }
+
+        function goBack() {
+            window.location.href = "index.html"; 
+        }
+    </script>
 </body>
 </html>
